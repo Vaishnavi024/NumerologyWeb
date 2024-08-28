@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerology Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  
+<body>
+  <header>
+    <div class="logo">Ultimate Numerology</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Numerology</a></li>
+        <li><a href="#calculate">Calculate</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Explore the Mystical World of Numbers</h2>
+    <h1>Discover Your Numerology Numbers</h1>
+    <p>Unlock your potential with personalized numerology reports</p>
+    <a href="#calculate" class="cta-button">Get Started</a>
+  </section>
+
+  <section id="about">
+    <h2>About Numerology</h2>
+    <p>Numerology is an ancient practice that studies the mystical and symbolic significance of numbers. Its origins can be traced back thousands of years across various cultures worldwide.</p>
+    <ul>
+        <li><strong>Ancient Civilizations:</strong> 
+            <ul>
+                <li><strong>Babylon:</strong> One of the earliest civilizations to use numerology, with practices dating back to 4000 BCE, associating numbers with celestial bodies and gods.</li>
+                <li><strong>Egypt:</strong> The Egyptians believed numbers held spiritual significance, particularly in their religious practices and architecture.</li>
+            </ul>
+        </li>
+        <li><strong>Pythagorean Numerology:</strong> 
+            <ul>
+                <li><strong>Pythagoras:</strong> The Greek philosopher Pythagoras (570–495 BCE) is considered the father of modern numerology. He proposed that the universe could be understood through numerical relationships, leading to the development of Pythagorean numerology, where each letter of the alphabet is assigned a number.</li>
+            </ul>
+        </li>
+        <li><strong>Chinese Numerology:</strong> 
+            <ul>
+                <li><strong>I Ching and Lo Shu Square:</strong> In China, numerology is closely tied to the "I Ching" (Book of Changes) and the "Lo Shu Square," which influence Feng Shui and associate specific numbers with good or bad fortune based on phonetics.</li>
+            </ul>
+        </li>
+        <li><strong>Western Numerology:</strong> 
+            <ul>
+                <li><strong>Middle Ages to Renaissance:</strong> Numerology intertwined with astrology and alchemy in Europe, particularly within Christian mysticism. The Renaissance brought a renewed interest in numerology through the rediscovery of ancient texts.</li>
+                <li><strong>Modern Numerology:</strong> In the 19th and 20th centuries, numerology was popularized in the West, blending Pythagorean principles with Western esoteric traditions, and is used today for personal insight and life guidance.</li>
+            </ul>
+        </li>
+        <li><strong>Contemporary Practice:</strong> 
+            <ul>
+                <li>Today, numerology is practiced globally as a tool for understanding personality, destiny, and life’s patterns, drawing from ancient traditions and evolving through modern interpretations.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+
+  <section id="calculate">
+    <h2>Calculate Your Numbers</h2>
+    <form id="numerology-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob" name="dob" required>
+      
+      <button type="submit">Calculate</button>
+    </form>
+  </section>
+
+  <section id="report" class="hidden">
+    <h2>Your Numerology Report</h2>
+    <div id="report-content"></div>
+  </section>
+
+  <!-- <footer>
+    <p>&copy; 2024 Numerology Expert. All rights reserved.</p>
+  </footer> -->
+
+  <script src="scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#dob").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "1900:2100",
+        dateFormat: "dd-mm-yy"
+      });
+    });
+  </script>
+</body>
+</html>
